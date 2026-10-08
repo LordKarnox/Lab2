@@ -8,14 +8,18 @@ Date: October 8, 2026
 
 from coin import Coin
 
+
 class Player:
     def __init__(self, name):
-        self.name = name
-        self.coin = Coin()
-        self.score = 0
+        self.__name = name
+        self.__coin = Coin()
+        self.__wallet = 20
+
+    def get_name(self):
+        return self.__name
 
     def toss_coin(self):
-        self.coin.toss()
+        self.__coin.toss()
 
     def get_coin_side(self):
         return self.__coin.get_sideup()
@@ -29,6 +33,5 @@ class Player:
     def get_wallet(self):
         return self.__wallet
 
-    def get_name(self):
-        return self.name
+    
     
